@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ult-Ht-AgP">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="ARView" id="BV1-FR-VrT" customClass="ARView" customModule="AnotherTry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--Menu View-->
+        <scene sceneID="OF4-Tb-Xy5">
+            <objects>
+                <viewController storyboardIdentifier="MenuView" id="Ult-Ht-AgP" customClass="MenuView" customModule="AnotherTry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M1B-VG-CeU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Planetarium!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M44-k8-2n3">
+                                <rect key="frame" x="16" y="56" width="382" height="35"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tA-7s-BjU">
+                                <rect key="frame" x="119.66666666666669" y="191" width="175" height="52"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
+                                <state key="normal" title="AR Experience">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="arExperienceButtonPressedWithSender:" destination="Ult-Ht-AgP" eventType="touchUpInside" id="2f4-Nc-fkK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBZ-4G-X0D">
+                                <rect key="frame" x="150.66666666666666" y="293" width="112.99999999999997" height="52"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
+                                <state key="normal" title="Almanac">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPK-iy-1e4">
+                                <rect key="frame" x="159.66666666666666" y="395" width="95" height="52"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
+                                <state key="normal" title="Games">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3l-5v-1GF">
+                                <rect key="frame" x="172.66666666666666" y="653" width="69" height="49"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
+                                <state key="normal" title="Quit">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3tA-7s-BjU" firstAttribute="centerX" secondItem="V2J-Fp-ckj" secondAttribute="centerX" id="4mB-hV-pKo"/>
+                            <constraint firstItem="M44-k8-2n3" firstAttribute="centerX" secondItem="V2J-Fp-ckj" secondAttribute="centerX" id="5a2-nV-29k"/>
+                            <constraint firstItem="NPK-iy-1e4" firstAttribute="top" secondItem="RBZ-4G-X0D" secondAttribute="bottom" constant="50" id="Hgx-UD-0Nk"/>
+                            <constraint firstItem="V2J-Fp-ckj" firstAttribute="trailing" secondItem="M44-k8-2n3" secondAttribute="trailing" constant="16" id="L5k-kq-IPy"/>
+                            <constraint firstItem="V2J-Fp-ckj" firstAttribute="bottom" secondItem="R3l-5v-1GF" secondAttribute="bottom" constant="34" id="V38-pk-Mj8"/>
+                            <constraint firstItem="RBZ-4G-X0D" firstAttribute="top" secondItem="3tA-7s-BjU" secondAttribute="bottom" constant="50" id="WF4-1v-Upg"/>
+                            <constraint firstItem="RBZ-4G-X0D" firstAttribute="centerX" secondItem="V2J-Fp-ckj" secondAttribute="centerX" id="azs-Qs-VkW"/>
+                            <constraint firstItem="M44-k8-2n3" firstAttribute="top" secondItem="V2J-Fp-ckj" secondAttribute="top" constant="56" id="fzl-7H-tFr"/>
+                            <constraint firstItem="M44-k8-2n3" firstAttribute="leading" secondItem="V2J-Fp-ckj" secondAttribute="leading" constant="16" id="hMP-FR-Xcn"/>
+                            <constraint firstItem="NPK-iy-1e4" firstAttribute="centerX" secondItem="V2J-Fp-ckj" secondAttribute="centerX" id="ldm-z0-fw9"/>
+                            <constraint firstItem="3tA-7s-BjU" firstAttribute="top" secondItem="M44-k8-2n3" secondAttribute="bottom" constant="100" id="whe-NZ-8b2"/>
+                            <constraint firstItem="R3l-5v-1GF" firstAttribute="centerX" secondItem="V2J-Fp-ckj" secondAttribute="centerX" id="xfG-l9-1aT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V2J-Fp-ckj"/>
+                    </view>
+                    <connections>
+                        <outlet property="almanacButton" destination="RBZ-4G-X0D" id="qf9-4l-oau"/>
+                        <outlet property="arButton" destination="3tA-7s-BjU" id="xJ4-HC-QSm"/>
+                        <outlet property="gamesButton" destination="NPK-iy-1e4" id="Rfq-ZE-Lrw"/>
+                        <outlet property="quitButton" destination="R3l-5v-1GF" id="hpa-mQ-dQv"/>
+                        <outlet property="welcomeLabel" destination="M44-k8-2n3" id="UHm-Me-XYW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CG2-M5-Dbn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807.20000000000005" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>
