@@ -6,7 +6,6 @@
 //  Copyright © 2020 Irina Cercel. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class ARCoordinator: Coordinator {
@@ -19,7 +18,7 @@ class ARCoordinator: Coordinator {
     
     func start() {
         let vc = ARView.instantiate()
-        vc.coordinator = self
+        vc.arVM = ARViewModel(coordinator: self)
         navigationController.pushViewController(vc, animated: true)
     }
 }

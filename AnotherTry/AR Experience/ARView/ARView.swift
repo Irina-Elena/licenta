@@ -15,69 +15,62 @@ class ARView: UIViewController, Storyboarded, ARSCNViewDelegate, CLLocationManag
 
     @IBOutlet weak var sceneView: ARSCNView!
     
-    weak var coordinator: ARCoordinator?
-    
-    var sun: SCNScene!
-    var earth: SCNScene!
-    var moon: SCNScene!
-    var mercury: SCNScene!
-    var mars: SCNScene!
-    var jupiter: SCNScene!
-    var saturn: SCNScene!
-    var neptune:SCNScene!
-    var venus: SCNScene!
-    var uranus: SCNScene!
-    var pluto: SCNScene!
+    var arVM: ARViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        prepareScene()
+//        prepareScene()
+        createPlanets()
+        setScene()
+        gestureRecognizer()
+    }
+    
+    func createPlanets() {
+        let planets = [("Sun", 0, 0, 0), ("Mercury", 0, 1, -1), ("Venus", 7, 0, -5), ("Earth", 10, 10, 3),
+                       ("Moon", 10, 12, 5), ("Mars", -5, 0, 0), ("Jupiter", -15, 12, -10), ("Saturn", -5, 5, 20),
+                       ("Uranus", 5, -3, 30), ("Neptune", 30, 5 , 30), ("Pluto", -20, -3, 25)]
+        if let arVM = arVM {
+            arVM.setPlanets(planets: planets)
+        }
+    }
+    
+    func setScene() {
+        let scene = SCNScene()
+        sceneView.scene = scene
+        if let arVM = arVM {
+            let planets = arVM.getPlanets()
+            for planet in planets{
+                self.sceneView.scene.rootNode.addChildNode(planet.node)
+            }
+        }
     }
     
     func prepareScene() {
-        let scene = SCNScene()
-        sceneView.scene = scene
-        
-        sun = SCNScene(named: "art.scnassets/Sun.scn")!
-        mercury = SCNScene(named: "art.scnassets/Mercury.scn")!
-        pluto = SCNScene(named: "art.scnassets/Pluto.scn")!
-        moon = SCNScene(named: "art.scnassets/Moon.scn")!
-        earth = SCNScene(named: "art.scnassets/Earth.scn")!
-        mars = SCNScene(named: "art.scnassets/Mars.scn")!
-        uranus = SCNScene(named: "art.scnassets/Uranus.scn")!
-        saturn = SCNScene(named: "art.scnassets/Saturn.scn")!
-        jupiter = SCNScene(named: "art.scnassets/Jupiter.scn")!
-        neptune = SCNScene(named: "art.scnassets/Neptune.scn")!
-        venus = SCNScene(named: "art.scnassets/Venus.scn")!
-        
-        mercury.rootNode.childNodes[0].position = SCNVector3(0, 1, -1)
-        venus.rootNode.childNodes[0].position = SCNVector3(7, 0, -5)
-        earth.rootNode.childNodes[0].position = SCNVector3(10, 10, 3)
-        moon.rootNode.childNodes[0].position = SCNVector3(10,12,5)
-        mars.rootNode.childNodes[0].position = SCNVector3(-5, 0, 0)
-        jupiter.rootNode.childNodes[0].position = SCNVector3(-15, 12, -10)
-        saturn.rootNode.childNodes[0].position = SCNVector3(-5, 5, 20)
-        uranus.rootNode.childNodes[0].position = SCNVector3(5, -3, 30)
-        neptune.rootNode.childNodes[0].position = SCNVector3(30, 5 , 30)
-        pluto.rootNode.childNodes[0].position = SCNVector3(-20, -3, 25)
+//        sun.rootNode.runAction(SCNAction.rotateBy(x: 0 , y: 5, z: 0, duration: 20))
+//        mercury.rootNode.childNodes[0].runAction(SCNAction.rotateBy(x: 0 , y: 20, z: 0, duration: 20))
+//        venus.rootNode.childNodes[0].runAction(SCNAction.rotateBy(x: 0, y: 20, z: 0, duration: 20))
 
-        sun.rootNode.runAction(SCNAction.rotateBy(x: 0 , y: 5, z: 0, duration: 20))
-        mercury.rootNode.childNodes[0].runAction(SCNAction.rotateBy(x: 0 , y: 20, z: 0, duration: 20))
-        venus.rootNode.childNodes[0].runAction(SCNAction.rotateBy(x: 0, y: 20, z: 0, duration: 20))
-        
-        scene.rootNode.addChildNode(sun.rootNode)
-        scene.rootNode.addChildNode(mercury.rootNode)
-        scene.rootNode.addChildNode(venus.rootNode)
-        scene.rootNode.addChildNode(earth.rootNode)
-        scene.rootNode.addChildNode(moon.rootNode)
-        scene.rootNode.addChildNode(mars.rootNode)
-        scene.rootNode.addChildNode(jupiter.rootNode)
-        scene.rootNode.addChildNode(saturn.rootNode)
-        scene.rootNode.addChildNode(uranus.rootNode)
-        scene.rootNode.addChildNode(neptune.rootNode)
-        scene.rootNode.addChildNode(pluto.rootNode)
     }
+    
+    //press a planet
+    private func gestureRecognizer() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        sceneView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func tapped(recogniser: UIGestureRecognizer) {
+        let scnView = recogniser.view as! SCNView
+        let touchLocation = recogniser.location(in: scnView)
+        let hitResult = scnView.hitTest(touchLocation, options: [:])
+        
+        if !hitResult.isEmpty {
+            let nodeName = hitResult[0].node.name
+            print(nodeName as Any)
+        }
+    }
+   
+    
     
     func getCoordinates(azimuth: Double, altitude: Double, radius: Double) -> (Double,Double,Double) {
         let x = radius * sin(azimuth) * sin(altitude)

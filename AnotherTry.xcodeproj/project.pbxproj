@@ -19,6 +19,8 @@
 		AF516AFB23EAEB5600445A75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF516AF923EAEB5600445A75 /* Main.storyboard */; };
 		AF516AFD23EAEB5700445A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF516AFC23EAEB5700445A75 /* Assets.xcassets */; };
 		AF516B0023EAEB5700445A75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF516AFE23EAEB5700445A75 /* LaunchScreen.storyboard */; };
+		AFD6392E2448EC30007F3A9B /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6392D2448EC30007F3A9B /* ARViewModel.swift */; };
+		AFEA20F72449FBD90018FA2D /* ARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA20F62449FBD90018FA2D /* ARModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		AF516AFC23EAEB5700445A75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF516AFF23EAEB5700445A75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF516B0123EAEB5700445A75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD6392D2448EC30007F3A9B /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
+		AFEA20F62449FBD90018FA2D /* ARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		AF49C7FF243A6EAB006E610F /* AR Experience */ = {
 			isa = PBXGroup;
 			children = (
+				AFEA20F52449FBC50018FA2D /* ARModel */,
+				AFD6392C2448EC15007F3A9B /* ARViewModel */,
 				AF49C801243A6EC5006E610F /* ARCoordinator */,
 				AF49C800243A6EB9006E610F /* ARView */,
 			);
@@ -131,6 +137,22 @@
 				AF516B0123EAEB5700445A75 /* Info.plist */,
 			);
 			path = AnotherTry;
+			sourceTree = "<group>";
+		};
+		AFD6392C2448EC15007F3A9B /* ARViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFD6392D2448EC30007F3A9B /* ARViewModel.swift */,
+			);
+			path = ARViewModel;
+			sourceTree = "<group>";
+		};
+		AFEA20F52449FBC50018FA2D /* ARModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFEA20F62449FBD90018FA2D /* ARModel.swift */,
+			);
+			path = ARModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,9 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD6392E2448EC30007F3A9B /* ARViewModel.swift in Sources */,
 				AF516AF823EAEB5600445A75 /* ARView.swift in Sources */,
 				AF3DDA262439FFF700E56C4E /* MenuView.swift in Sources */,
 				AF49C7FB243A65FD006E610F /* Coordinator.swift in Sources */,
+				AFEA20F72449FBD90018FA2D /* ARModel.swift in Sources */,
 				AF49C7F9243A65E3006E610F /* MenuCoordinator.swift in Sources */,
 				AF12FA8123FC0ED000C6F0C9 /* PlanetCalculus.swift in Sources */,
 				AF49C805243A6EED006E610F /* ARCoordinator.swift in Sources */,
