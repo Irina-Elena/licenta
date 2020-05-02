@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ult-Ht-AgP">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +34,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="-74" y="136"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tcr-qq-cZi">
+            <objects>
+                <viewController id="dFL-j6-RPn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jMz-TT-dDd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1EN-xF-kat">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="295.33333333333331"/>
+                            </sceneKitView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAG-aW-67Y">
+                                <rect key="frame" x="155" y="680" width="104" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show More!"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planet" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXw-Dn-zOH">
+                                <rect key="frame" x="20" y="320.33333333333331" width="374" height="22.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The n-th planet" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8n-28-uLN">
+                                <rect key="frame" x="20" y="357.66666666666669" width="374" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1EN-xF-kat" firstAttribute="top" secondItem="EMe-1t-nSR" secondAttribute="top" id="4oq-Yv-JDF"/>
+                            <constraint firstItem="wAG-aW-67Y" firstAttribute="centerX" secondItem="EMe-1t-nSR" secondAttribute="centerX" id="4zY-hd-1Jt"/>
+                            <constraint firstItem="MXw-Dn-zOH" firstAttribute="leading" secondItem="EMe-1t-nSR" secondAttribute="leading" constant="20" id="69G-CL-aI7"/>
+                            <constraint firstItem="MXw-Dn-zOH" firstAttribute="top" secondItem="1EN-xF-kat" secondAttribute="bottom" constant="25" id="7JH-di-dr3"/>
+                            <constraint firstItem="EMe-1t-nSR" firstAttribute="bottom" secondItem="M8n-28-uLN" secondAttribute="bottom" constant="358" id="98i-5K-Sy1"/>
+                            <constraint firstItem="EMe-1t-nSR" firstAttribute="trailing" secondItem="MXw-Dn-zOH" secondAttribute="trailing" constant="20" id="Jrd-76-H2x"/>
+                            <constraint firstItem="M8n-28-uLN" firstAttribute="top" secondItem="MXw-Dn-zOH" secondAttribute="bottom" constant="15" id="VaM-SM-06S"/>
+                            <constraint firstItem="EMe-1t-nSR" firstAttribute="trailing" secondItem="M8n-28-uLN" secondAttribute="trailing" constant="20" id="WWu-Vh-AIo"/>
+                            <constraint firstItem="M8n-28-uLN" firstAttribute="leading" secondItem="MXw-Dn-zOH" secondAttribute="leading" id="YKT-52-c3x"/>
+                            <constraint firstItem="1EN-xF-kat" firstAttribute="leading" secondItem="EMe-1t-nSR" secondAttribute="leading" id="aPy-0d-YwT"/>
+                            <constraint firstItem="EMe-1t-nSR" firstAttribute="bottom" secondItem="wAG-aW-67Y" secondAttribute="bottom" constant="20" id="dnV-PZ-9Op"/>
+                            <constraint firstItem="1EN-xF-kat" firstAttribute="trailing" secondItem="EMe-1t-nSR" secondAttribute="trailing" id="sFU-Wr-Q4W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EMe-1t-nSR"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="MXw-Dn-zOH" id="IGp-84-HCN"/>
+                        <outlet property="planetScene" destination="1EN-xF-kat" id="eAj-1l-1c1"/>
+                        <outlet property="shortDescriptionLabel" destination="M8n-28-uLN" id="Rrq-U3-PAe"/>
+                        <outlet property="showMoreButton" destination="wAG-aW-67Y" id="tfT-w8-JxN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0nQ-pt-MsQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630.43478260869574" y="134.5108695652174"/>
         </scene>
         <!--Menu View-->
         <scene sceneID="OF4-Tb-Xy5">

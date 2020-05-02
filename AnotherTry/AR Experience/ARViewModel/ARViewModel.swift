@@ -6,7 +6,6 @@
 //  Copyright © 2020 Irina Cercel. All rights reserved.
 //
 
-
 class ARViewModel {
     private var planets: [PlanetModel] = []
     weak var coordinator: Coordinator?
@@ -17,7 +16,7 @@ class ARViewModel {
     
     func setPlanets(planets: [(String, Int, Int, Int)]) {
         for planet in planets{
-            self.planets.append(PlanetModel(planetName: planet.0, x: planet.1, y: planet.2, z: planet.3))
+            self.planets.append(PlanetModel(planetName: planet.0, position: (planet.1,planet.2,planet.3)))
         }
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151048C6B8D1A6F1D58F45EA /* libPods-AnotherTry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F07CF882E2DF6C38AF1331E /* libPods-AnotherTry.a */; };
 		AF12FA8123FC0ED000C6F0C9 /* PlanetCalculus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF12FA8023FC0ED000C6F0C9 /* PlanetCalculus.swift */; };
 		AF3DDA262439FFF700E56C4E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DDA252439FFF700E56C4E /* MenuView.swift */; };
 		AF49C7F9243A65E3006E610F /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF49C7F8243A65E3006E610F /* MenuCoordinator.swift */; };
@@ -19,11 +20,16 @@
 		AF516AFB23EAEB5600445A75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF516AF923EAEB5600445A75 /* Main.storyboard */; };
 		AF516AFD23EAEB5700445A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF516AFC23EAEB5700445A75 /* Assets.xcassets */; };
 		AF516B0023EAEB5700445A75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF516AFE23EAEB5700445A75 /* LaunchScreen.storyboard */; };
+		AFA0F5A4245217E30045A24D /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA0F5A3245217E30045A24D /* PopUpView.swift */; };
+		AFC8C93F245B27BE006CA98E /* StarPraticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = AFC8C93E245B27BE006CA98E /* StarPraticles.sks */; };
+		AFC8C941245B794B006CA98E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8C940245B794B006CA98E /* Utils.swift */; };
 		AFD6392E2448EC30007F3A9B /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6392D2448EC30007F3A9B /* ARViewModel.swift */; };
-		AFEA20F72449FBD90018FA2D /* ARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA20F62449FBD90018FA2D /* ARModel.swift */; };
+		AFEA20F72449FBD90018FA2D /* PlanetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA20F62449FBD90018FA2D /* PlanetModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F07CF882E2DF6C38AF1331E /* libPods-AnotherTry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnotherTry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD44251873A83F014EF34EC5 /* Pods-AnotherTry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnotherTry.debug.xcconfig"; path = "Target Support Files/Pods-AnotherTry/Pods-AnotherTry.debug.xcconfig"; sourceTree = "<group>"; };
 		AF12FA8023FC0ED000C6F0C9 /* PlanetCalculus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCalculus.swift; sourceTree = "<group>"; };
 		AF3DDA252439FFF700E56C4E /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AF49C7F8243A65E3006E610F /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
@@ -38,8 +44,12 @@
 		AF516AFC23EAEB5700445A75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF516AFF23EAEB5700445A75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF516B0123EAEB5700445A75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFA0F5A3245217E30045A24D /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		AFC8C93E245B27BE006CA98E /* StarPraticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarPraticles.sks; sourceTree = "<group>"; };
+		AFC8C940245B794B006CA98E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		AFD6392D2448EC30007F3A9B /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
-		AFEA20F62449FBD90018FA2D /* ARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARModel.swift; sourceTree = "<group>"; };
+		AFEA20F62449FBD90018FA2D /* PlanetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModel.swift; sourceTree = "<group>"; };
+		F6B8E634B8692B244C33FF9F /* Pods-AnotherTry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnotherTry.release.xcconfig"; path = "Target Support Files/Pods-AnotherTry/Pods-AnotherTry.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,12 +57,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				151048C6B8D1A6F1D58F45EA /* libPods-AnotherTry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45FFF64084B8BC6B2A6DBED0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD44251873A83F014EF34EC5 /* Pods-AnotherTry.debug.xcconfig */,
+				F6B8E634B8692B244C33FF9F /* Pods-AnotherTry.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AF49C7F5243A56D0006E610F /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +130,8 @@
 			children = (
 				AF516AF223EAEB5600445A75 /* AnotherTry */,
 				AF516AF123EAEB5600445A75 /* Products */,
+				45FFF64084B8BC6B2A6DBED0 /* Pods */,
+				DF739D48422DC5018834793E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,9 +146,11 @@
 		AF516AF223EAEB5600445A75 /* AnotherTry */ = {
 			isa = PBXGroup;
 			children = (
+				AFA0F5A2245217BF0045A24D /* PopUpScreen */,
 				AF49C7FF243A6EAB006E610F /* AR Experience */,
 				AF49C7F5243A56D0006E610F /* Menu */,
 				AF516AF323EAEB5600445A75 /* AppDelegate.swift */,
+				AFC8C940245B794B006CA98E /* Utils.swift */,
 				AF49C7FD243A69C6006E610F /* Storyboarded.swift */,
 				AF49C7FA243A65FD006E610F /* Coordinator.swift */,
 				AF516AF523EAEB5600445A75 /* art.scnassets */,
@@ -137,6 +161,15 @@
 				AF516B0123EAEB5700445A75 /* Info.plist */,
 			);
 			path = AnotherTry;
+			sourceTree = "<group>";
+		};
+		AFA0F5A2245217BF0045A24D /* PopUpScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AFA0F5A3245217E30045A24D /* PopUpView.swift */,
+				AFC8C93E245B27BE006CA98E /* StarPraticles.sks */,
+			);
+			path = PopUpScreen;
 			sourceTree = "<group>";
 		};
 		AFD6392C2448EC15007F3A9B /* ARViewModel */ = {
@@ -150,9 +183,17 @@
 		AFEA20F52449FBC50018FA2D /* ARModel */ = {
 			isa = PBXGroup;
 			children = (
-				AFEA20F62449FBD90018FA2D /* ARModel.swift */,
+				AFEA20F62449FBD90018FA2D /* PlanetModel.swift */,
 			);
 			path = ARModel;
+			sourceTree = "<group>";
+		};
+		DF739D48422DC5018834793E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F07CF882E2DF6C38AF1331E /* libPods-AnotherTry.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF516B0423EAEB5700445A75 /* Build configuration list for PBXNativeTarget "AnotherTry" */;
 			buildPhases = (
+				2CC674AF39CBA4E62C748786 /* [CP] Check Pods Manifest.lock */,
 				AF516AEC23EAEB5600445A75 /* Sources */,
 				AF516AED23EAEB5600445A75 /* Frameworks */,
 				AF516AEE23EAEB5600445A75 /* Resources */,
@@ -217,26 +259,54 @@
 				AF516B0023EAEB5700445A75 /* LaunchScreen.storyboard in Resources */,
 				AF516AFD23EAEB5700445A75 /* Assets.xcassets in Resources */,
 				AF516AFB23EAEB5600445A75 /* Main.storyboard in Resources */,
+				AFC8C93F245B27BE006CA98E /* StarPraticles.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CC674AF39CBA4E62C748786 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnotherTry-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF516AEC23EAEB5600445A75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA0F5A4245217E30045A24D /* PopUpView.swift in Sources */,
 				AFD6392E2448EC30007F3A9B /* ARViewModel.swift in Sources */,
 				AF516AF823EAEB5600445A75 /* ARView.swift in Sources */,
 				AF3DDA262439FFF700E56C4E /* MenuView.swift in Sources */,
 				AF49C7FB243A65FD006E610F /* Coordinator.swift in Sources */,
-				AFEA20F72449FBD90018FA2D /* ARModel.swift in Sources */,
+				AFEA20F72449FBD90018FA2D /* PlanetModel.swift in Sources */,
 				AF49C7F9243A65E3006E610F /* MenuCoordinator.swift in Sources */,
 				AF12FA8123FC0ED000C6F0C9 /* PlanetCalculus.swift in Sources */,
 				AF49C805243A6EED006E610F /* ARCoordinator.swift in Sources */,
 				AF516AF423EAEB5600445A75 /* AppDelegate.swift in Sources */,
 				AF49C7FE243A69C6006E610F /* Storyboarded.swift in Sources */,
+				AFC8C941245B794B006CA98E /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +368,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/irinacercel/Documents/licenta/AnotherTry/Pods/Realm,
+					/Users/irinacercel/Documents/licenta/AnotherTry/Pods/Realm.Swift,
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -358,6 +432,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/irinacercel/Documents/licenta/AnotherTry/Pods/Realm,
+					/Users/irinacercel/Documents/licenta/AnotherTry/Pods/RealmSwift,
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -378,15 +456,22 @@
 		};
 		AF516B0523EAEB5700445A75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD44251873A83F014EF34EC5 /* Pods-AnotherTry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JWTA859GYB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Realm\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift\"",
+				);
 				INFOPLIST_FILE = AnotherTry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = irina.cercel.AnotherTry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -396,15 +481,22 @@
 		};
 		AF516B0623EAEB5700445A75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6B8E634B8692B244C33FF9F /* Pods-AnotherTry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JWTA859GYB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Frameowrks/Realm\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Frameworks/RealmSwift\"",
+				);
 				INFOPLIST_FILE = AnotherTry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = irina.cercel.AnotherTry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

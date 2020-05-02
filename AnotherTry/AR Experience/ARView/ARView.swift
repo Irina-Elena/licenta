@@ -17,6 +17,8 @@ class ARView: UIViewController, Storyboarded, ARSCNViewDelegate, CLLocationManag
     
     var arVM: ARViewModel?
 
+    lazy var popUpView = PopUpView(frame: CGRect(x: 10, y: self.view.frame.height, width: self.view.frame.width - 20, height: self.view.frame.height - 30))
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,11 +69,42 @@ class ARView: UIViewController, Storyboarded, ARSCNViewDelegate, CLLocationManag
         if !hitResult.isEmpty {
             let nodeName = hitResult[0].node.name
             print(nodeName as Any)
+            
+            let screenSize = UIScreen.main.bounds.size
+//            popUpView.frame.size = CGSize(width: view.frame.width - 20, height: view.frame.height - 30)
+            view.addSubview(self.popUpView)
+            popUpView.transform = CGAffineTransform(translationX: 0, y: screenSize.height)
+            
+            UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0,options: .curveEaseInOut, animations: {
+                self.popUpView.transform = CGAffineTransform(translationX: 0, y: 0)
+                self.popUpView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+                self.popUpView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+                self.popUpView.widthAnchor.constraint(equalToConstant: self.view.frame.width - 20).isActive = true
+                self.popUpView.heightAnchor.constraint(equalToConstant: self.view.frame.height - 30).isActive = true
+            }, completion: nil)
+            
+            popUpView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDragGesture)))
+        }
+    }
+    
+    @objc func handleDragGesture(gesture: UIPanGestureRecognizer) {
+        
+        if gesture.state == .began {
+            print("began")
+        } else if gesture.state == .changed {
+            print("changed")
+            let screenSize = UIScreen.main.bounds.size
+            UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0,options: .curveEaseInOut, animations: {
+                self.popUpView.transform = CGAffineTransform(translationX: 0, y: screenSize.height)
+                }, completion: nil)
+        } else if gesture.state == .ended {
+            print("ended")
+            self.popUpView.removeFromSuperview()
         }
     }
    
     
-    
+    // MARK: -The old view with planet calculus
     func getCoordinates(azimuth: Double, altitude: Double, radius: Double) -> (Double,Double,Double) {
         let x = radius * sin(azimuth) * sin(altitude)
         let y = radius * cos(altitude)

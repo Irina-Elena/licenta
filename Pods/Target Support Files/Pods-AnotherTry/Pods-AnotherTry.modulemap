@@ -1,0 +1,6 @@
+module Pods_AnotherTry {
+  umbrella header "Pods-AnotherTry-umbrella.h"
+
+  export *
+  module * { export * }
+}
