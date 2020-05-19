@@ -10,7 +10,7 @@ import Foundation
 import  UIKit
 
 class MenuCoordinator: Coordinator {
-    var children = [Coordinator]()
+//    var children = [Coordinator]()
     var navigationController: UINavigationController
     
     init(nav: UINavigationController) {
@@ -19,12 +19,17 @@ class MenuCoordinator: Coordinator {
     
     func start() {
         let vc = MenuView.instantiate()
-        vc.coordinator = self
+        vc.menuVM = MenuViewModel(coordinator: self)
         navigationController.pushViewController(vc, animated: true)
     }
     
     func goToARExperience() {
         let coord = ARCoordinator(navigationController: navigationController)
+        coord.start()
+    }
+    
+    func goToAlmanac() {
+        let coord = AlmanacCoordinator(navController: navigationController)
         coord.start()
     }
 }

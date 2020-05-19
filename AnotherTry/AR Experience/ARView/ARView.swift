@@ -17,12 +17,16 @@ class ARView: UIViewController, Storyboarded, ARSCNViewDelegate, CLLocationManag
     
     var arVM: ARViewModel?
 
-    lazy var popUpView = PopUpView(frame: CGRect(x: 10, y: self.view.frame.height, width: self.view.frame.width - 20, height: self.view.frame.height - 30))
-
+    var popUpView: PopUpView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        prepareScene()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        
         createPlanets()
         setScene()
         gestureRecognizer()
@@ -32,9 +36,6 @@ class ARView: UIViewController, Storyboarded, ARSCNViewDelegate, CLLocationManag
         let planets = [("Sun", 0, 0, 0), ("Mercury", 0, 1, -1), ("Venus", 7, 0, -5), ("Earth", 10, 10, 3),
                        ("Moon", 10, 12, 5), ("Mars", -5, 0, 0), ("Jupiter", -15, 12, -10), ("Saturn", -5, 5, 20),
                        ("Uranus", 5, -3, 30), ("Neptune", 30, 5 , 30), ("Pluto", -20, -3, 25)]
-        if let arVM = arVM {
-            arVM.setPlanets(planets: planets)
-        }
     }
     
     func setScene() {
@@ -43,16 +44,11 @@ class ARView: UIViewController, Storyboarded, ARSCNViewDelegate, CLLocationManag
         if let arVM = arVM {
             let planets = arVM.getPlanets()
             for planet in planets{
-                self.sceneView.scene.rootNode.addChildNode(planet.node)
+                if let node = planet.node{
+                    self.sceneView.scene.rootNode.addChildNode(node)
+                }
             }
         }
-    }
-    
-    func prepareScene() {
-//        sun.rootNode.runAction(SCNAction.rotateBy(x: 0 , y: 5, z: 0, duration: 20))
-//        mercury.rootNode.childNodes[0].runAction(SCNAction.rotateBy(x: 0 , y: 20, z: 0, duration: 20))
-//        venus.rootNode.childNodes[0].runAction(SCNAction.rotateBy(x: 0, y: 20, z: 0, duration: 20))
-
     }
     
     //press a planet
@@ -62,29 +58,37 @@ class ARView: UIViewController, Storyboarded, ARSCNViewDelegate, CLLocationManag
     }
     
     @objc func tapped(recogniser: UIGestureRecognizer) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
         let scnView = recogniser.view as! SCNView
         let touchLocation = recogniser.location(in: scnView)
         let hitResult = scnView.hitTest(touchLocation, options: [:])
         
         if !hitResult.isEmpty {
             let nodeName = hitResult[0].node.name
-            print(nodeName as Any)
-            
-            let screenSize = UIScreen.main.bounds.size
-//            popUpView.frame.size = CGSize(width: view.frame.width - 20, height: view.frame.height - 30)
-            view.addSubview(self.popUpView)
-            popUpView.transform = CGAffineTransform(translationX: 0, y: screenSize.height)
-            
-            UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0,options: .curveEaseInOut, animations: {
-                self.popUpView.transform = CGAffineTransform(translationX: 0, y: 0)
-                self.popUpView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-                self.popUpView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-                self.popUpView.widthAnchor.constraint(equalToConstant: self.view.frame.width - 20).isActive = true
-                self.popUpView.heightAnchor.constraint(equalToConstant: self.view.frame.height - 30).isActive = true
-            }, completion: nil)
-            
-            popUpView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDragGesture)))
-        }
+            if let name = nodeName {
+                let planet: CosmicObject? = arVM?.getPlanet(planetName: name)
+                if let planet = planet, let shortDescription = planet.shortDescription {
+                        let screenSize = UIScreen.main.bounds.size
+                        //            popUpView.frame.size = CGSize(width: view.frame.width - 20, height: view.frame.height - 30)
+                                    
+                        popUpView = PopUpView(frame: CGRect(x: 10, y: self.view.frame.height, width: self.view.frame.width - 20, height: self.view.frame.height - 30), planetName: planet.name, shortDescription: shortDescription, quickFacts: Array(planet.quickFacts))
+
+                        view.addSubview(self.popUpView)
+                        popUpView.transform = CGAffineTransform(translationX: 0, y: screenSize.height)
+                                    
+                        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0,options: .curveEaseInOut, animations: {
+                            self.popUpView.transform = CGAffineTransform(translationX: 0, y: 0)
+                            self.popUpView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+                            self.popUpView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+                            self.popUpView.widthAnchor.constraint(equalToConstant: self.view.frame.width - 20).isActive = true
+                            self.popUpView.heightAnchor.constraint(equalToConstant: self.view.frame.height - 30).isActive = true
+                        }, completion: nil)
+                                    
+                        popUpView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDragGesture)))
+                    }
+                }
+            }
     }
     
     @objc func handleDragGesture(gesture: UIPanGestureRecognizer) {
@@ -99,6 +103,7 @@ class ARView: UIViewController, Storyboarded, ARSCNViewDelegate, CLLocationManag
                 }, completion: nil)
         } else if gesture.state == .ended {
             print("ended")
+            navigationController?.setNavigationBarHidden(false, animated: true)
             self.popUpView.removeFromSuperview()
         }
     }
@@ -134,7 +139,7 @@ class ARView: UIViewController, Storyboarded, ARSCNViewDelegate, CLLocationManag
                 sleep(1)
         //        print(locationManager.heading)
                 currentAzimuth = locationManager.heading?.magneticHeading
-                print(currentAzimuth)
+                print(currentAzimuth!)
                 print(coordinateString(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude))
                 
                 // Set the view's delegate

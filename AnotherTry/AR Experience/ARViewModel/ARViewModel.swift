@@ -7,21 +7,26 @@
 //
 
 class ARViewModel {
-    private var planets: [PlanetModel] = []
+    private var cosmicObjects: [CosmicObject] = []
     weak var coordinator: Coordinator?
+    let realmService = RealmService()
     
     init(coordinator: Coordinator) {
         self.coordinator = coordinator
+//        realmService.setData()
+        self.cosmicObjects = realmService.getData()
     }
     
-    func setPlanets(planets: [(String, Int, Int, Int)]) {
-        for planet in planets{
-            self.planets.append(PlanetModel(planetName: planet.0, position: (planet.1,planet.2,planet.3)))
+    func getPlanets() -> [CosmicObject] {
+        return cosmicObjects
+    }
+    
+    func getPlanet(planetName: String) -> CosmicObject? {
+        for planet in cosmicObjects {
+            if planet.name == planetName {
+                return planet
+            }
         }
+        return nil
     }
-    
-    func getPlanets() -> [PlanetModel] {
-        return planets
-    }
-    
 }

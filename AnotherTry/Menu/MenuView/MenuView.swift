@@ -15,22 +15,29 @@ class MenuView: UIViewController, Storyboarded {
     @IBOutlet weak var gamesButton: UIButton!
     @IBOutlet weak var quitButton: UIButton!
     
-    weak var coordinator: MenuCoordinator?
+    var menuVM: MenuViewModel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper")!)
         
         designLabel(label: welcomeLabel)
-        
         designButton(button: arButton)
         designButton(button: almanacButton)
         designButton(button: gamesButton)
         designButton(button: quitButton)
-        
-        if let coordinator = coordinator {
-            coordinator.navigationController.setNavigationBarHidden(true, animated: false)
-        }
     }
     
     func designLabel(label: UILabel) {
@@ -64,9 +71,11 @@ class MenuView: UIViewController, Storyboarded {
     }
     
     @IBAction func arExperienceButtonPressed(sender: Any) {
-        if let coordinator = coordinator {
-            coordinator.goToARExperience()
-        }
+        menuVM.goToARExperience()
+    }
+    
+    @IBAction func almanacButtonPressed(sender: Any) {
+        menuVM.goToAlmanac()
     }
     
 

@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 protocol Coordinator: class {
-    var children: [Coordinator] {get set}
-    var navigationController: UINavigationController {get set}
+//    var children: [Coordinator] { get set }
+    var navigationController: UINavigationController { get set }
     
     func start()
 }

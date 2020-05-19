@@ -9,7 +9,7 @@
 import UIKit
 
 class ARCoordinator: Coordinator {
-    var children = [Coordinator]()
+//    var children = [Coordinator]()
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {

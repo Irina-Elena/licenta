@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		151048C6B8D1A6F1D58F45EA /* libPods-AnotherTry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F07CF882E2DF6C38AF1331E /* libPods-AnotherTry.a */; };
 		AF12FA8123FC0ED000C6F0C9 /* PlanetCalculus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF12FA8023FC0ED000C6F0C9 /* PlanetCalculus.swift */; };
+		AF18417B24744196000F467E /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18417A24744196000F467E /* RealmService.swift */; };
+		AF35F29724714B4B005D2F86 /* PlanetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35F29624714B4B005D2F86 /* PlanetCollectionViewCell.swift */; };
+		AF35F29C24714E22005D2F86 /* PlanetCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35F29B24714E22005D2F86 /* PlanetCellViewModel.swift */; };
+		AF35F29F2471BD6D005D2F86 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35F29E2471BD6D005D2F86 /* MenuViewModel.swift */; };
 		AF3DDA262439FFF700E56C4E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DDA252439FFF700E56C4E /* MenuView.swift */; };
 		AF49C7F9243A65E3006E610F /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF49C7F8243A65E3006E610F /* MenuCoordinator.swift */; };
 		AF49C7FB243A65FD006E610F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF49C7FA243A65FD006E610F /* Coordinator.swift */; };
@@ -20,17 +24,24 @@
 		AF516AFB23EAEB5600445A75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF516AF923EAEB5600445A75 /* Main.storyboard */; };
 		AF516AFD23EAEB5700445A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF516AFC23EAEB5700445A75 /* Assets.xcassets */; };
 		AF516B0023EAEB5700445A75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF516AFE23EAEB5700445A75 /* LaunchScreen.storyboard */; };
+		AF94B1BF245E0BFD00223C7E /* AlmanacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF94B1BE245E0BFD00223C7E /* AlmanacView.swift */; };
 		AFA0F5A4245217E30045A24D /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA0F5A3245217E30045A24D /* PopUpView.swift */; };
+		AFA3EBF8245F33EC004685C4 /* AlmanacCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3EBF7245F33EC004685C4 /* AlmanacCoordinator.swift */; };
+		AFA3EBFD245F3808004685C4 /* AlmanacViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3EBFC245F3808004685C4 /* AlmanacViewModel.swift */; };
 		AFC8C93F245B27BE006CA98E /* StarPraticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = AFC8C93E245B27BE006CA98E /* StarPraticles.sks */; };
 		AFC8C941245B794B006CA98E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8C940245B794B006CA98E /* Utils.swift */; };
 		AFD6392E2448EC30007F3A9B /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6392D2448EC30007F3A9B /* ARViewModel.swift */; };
-		AFEA20F72449FBD90018FA2D /* PlanetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA20F62449FBD90018FA2D /* PlanetModel.swift */; };
+		AFEA20F72449FBD90018FA2D /* CosmicObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA20F62449FBD90018FA2D /* CosmicObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F07CF882E2DF6C38AF1331E /* libPods-AnotherTry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnotherTry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD44251873A83F014EF34EC5 /* Pods-AnotherTry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnotherTry.debug.xcconfig"; path = "Target Support Files/Pods-AnotherTry/Pods-AnotherTry.debug.xcconfig"; sourceTree = "<group>"; };
 		AF12FA8023FC0ED000C6F0C9 /* PlanetCalculus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCalculus.swift; sourceTree = "<group>"; };
+		AF18417A24744196000F467E /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		AF35F29624714B4B005D2F86 /* PlanetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewCell.swift; sourceTree = "<group>"; };
+		AF35F29B24714E22005D2F86 /* PlanetCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCellViewModel.swift; sourceTree = "<group>"; };
+		AF35F29E2471BD6D005D2F86 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		AF3DDA252439FFF700E56C4E /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AF49C7F8243A65E3006E610F /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		AF49C7FA243A65FD006E610F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -44,11 +55,14 @@
 		AF516AFC23EAEB5700445A75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF516AFF23EAEB5700445A75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF516B0123EAEB5700445A75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF94B1BE245E0BFD00223C7E /* AlmanacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmanacView.swift; sourceTree = "<group>"; };
 		AFA0F5A3245217E30045A24D /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		AFA3EBF7245F33EC004685C4 /* AlmanacCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmanacCoordinator.swift; sourceTree = "<group>"; };
+		AFA3EBFC245F3808004685C4 /* AlmanacViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmanacViewModel.swift; sourceTree = "<group>"; };
 		AFC8C93E245B27BE006CA98E /* StarPraticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarPraticles.sks; sourceTree = "<group>"; };
 		AFC8C940245B794B006CA98E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		AFD6392D2448EC30007F3A9B /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
-		AFEA20F62449FBD90018FA2D /* PlanetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModel.swift; sourceTree = "<group>"; };
+		AFEA20F62449FBD90018FA2D /* CosmicObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmicObject.swift; sourceTree = "<group>"; };
 		F6B8E634B8692B244C33FF9F /* Pods-AnotherTry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnotherTry.release.xcconfig"; path = "Target Support Files/Pods-AnotherTry/Pods-AnotherTry.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,9 +87,43 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AF35F29824714DEF005D2F86 /* PlanetCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF35F29A24714E09005D2F86 /* PlanetCellViewModel */,
+				AF35F29924714DFC005D2F86 /* PlanetCellView */,
+			);
+			path = PlanetCell;
+			sourceTree = "<group>";
+		};
+		AF35F29924714DFC005D2F86 /* PlanetCellView */ = {
+			isa = PBXGroup;
+			children = (
+				AF35F29624714B4B005D2F86 /* PlanetCollectionViewCell.swift */,
+			);
+			path = PlanetCellView;
+			sourceTree = "<group>";
+		};
+		AF35F29A24714E09005D2F86 /* PlanetCellViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF35F29B24714E22005D2F86 /* PlanetCellViewModel.swift */,
+			);
+			path = PlanetCellViewModel;
+			sourceTree = "<group>";
+		};
+		AF35F29D2471BD5B005D2F86 /* MenuViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF35F29E2471BD6D005D2F86 /* MenuViewModel.swift */,
+			);
+			path = MenuViewModel;
+			sourceTree = "<group>";
+		};
 		AF49C7F5243A56D0006E610F /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				AF35F29D2471BD5B005D2F86 /* MenuViewModel */,
 				AF49C7F7243A56E6006E610F /* MenuCoordinator */,
 				AF49C7F6243A56DB006E610F /* MenuView */,
 			);
@@ -101,7 +149,6 @@
 		AF49C7FF243A6EAB006E610F /* AR Experience */ = {
 			isa = PBXGroup;
 			children = (
-				AFEA20F52449FBC50018FA2D /* ARModel */,
 				AFD6392C2448EC15007F3A9B /* ARViewModel */,
 				AF49C801243A6EC5006E610F /* ARCoordinator */,
 				AF49C800243A6EB9006E610F /* ARView */,
@@ -146,10 +193,13 @@
 		AF516AF223EAEB5600445A75 /* AnotherTry */ = {
 			isa = PBXGroup;
 			children = (
+				AF94B1BC245E0ACB00223C7E /* Almanac */,
 				AFA0F5A2245217BF0045A24D /* PopUpScreen */,
+				AFEA20F52449FBC50018FA2D /* CosmicObjectModel */,
 				AF49C7FF243A6EAB006E610F /* AR Experience */,
 				AF49C7F5243A56D0006E610F /* Menu */,
 				AF516AF323EAEB5600445A75 /* AppDelegate.swift */,
+				AF18417A24744196000F467E /* RealmService.swift */,
 				AFC8C940245B794B006CA98E /* Utils.swift */,
 				AF49C7FD243A69C6006E610F /* Storyboarded.swift */,
 				AF49C7FA243A65FD006E610F /* Coordinator.swift */,
@@ -163,6 +213,25 @@
 			path = AnotherTry;
 			sourceTree = "<group>";
 		};
+		AF94B1BC245E0ACB00223C7E /* Almanac */ = {
+			isa = PBXGroup;
+			children = (
+				AFA3EBFB245F37F0004685C4 /* AlmanacViewModel */,
+				AFA3EBF6245F33C2004685C4 /* AlamancCoordinator */,
+				AF94B1BD245E0AD800223C7E /* AlmanacView */,
+			);
+			path = Almanac;
+			sourceTree = "<group>";
+		};
+		AF94B1BD245E0AD800223C7E /* AlmanacView */ = {
+			isa = PBXGroup;
+			children = (
+				AF94B1BE245E0BFD00223C7E /* AlmanacView.swift */,
+				AF35F29824714DEF005D2F86 /* PlanetCell */,
+			);
+			path = AlmanacView;
+			sourceTree = "<group>";
+		};
 		AFA0F5A2245217BF0045A24D /* PopUpScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +239,22 @@
 				AFC8C93E245B27BE006CA98E /* StarPraticles.sks */,
 			);
 			path = PopUpScreen;
+			sourceTree = "<group>";
+		};
+		AFA3EBF6245F33C2004685C4 /* AlamancCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AFA3EBF7245F33EC004685C4 /* AlmanacCoordinator.swift */,
+			);
+			path = AlamancCoordinator;
+			sourceTree = "<group>";
+		};
+		AFA3EBFB245F37F0004685C4 /* AlmanacViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFA3EBFC245F3808004685C4 /* AlmanacViewModel.swift */,
+			);
+			path = AlmanacViewModel;
 			sourceTree = "<group>";
 		};
 		AFD6392C2448EC15007F3A9B /* ARViewModel */ = {
@@ -180,12 +265,12 @@
 			path = ARViewModel;
 			sourceTree = "<group>";
 		};
-		AFEA20F52449FBC50018FA2D /* ARModel */ = {
+		AFEA20F52449FBC50018FA2D /* CosmicObjectModel */ = {
 			isa = PBXGroup;
 			children = (
-				AFEA20F62449FBD90018FA2D /* PlanetModel.swift */,
+				AFEA20F62449FBD90018FA2D /* CosmicObject.swift */,
 			);
-			path = ARModel;
+			path = CosmicObjectModel;
 			sourceTree = "<group>";
 		};
 		DF739D48422DC5018834793E /* Frameworks */ = {
@@ -298,15 +383,22 @@
 				AFA0F5A4245217E30045A24D /* PopUpView.swift in Sources */,
 				AFD6392E2448EC30007F3A9B /* ARViewModel.swift in Sources */,
 				AF516AF823EAEB5600445A75 /* ARView.swift in Sources */,
+				AF35F29F2471BD6D005D2F86 /* MenuViewModel.swift in Sources */,
 				AF3DDA262439FFF700E56C4E /* MenuView.swift in Sources */,
+				AF35F29724714B4B005D2F86 /* PlanetCollectionViewCell.swift in Sources */,
 				AF49C7FB243A65FD006E610F /* Coordinator.swift in Sources */,
-				AFEA20F72449FBD90018FA2D /* PlanetModel.swift in Sources */,
+				AF94B1BF245E0BFD00223C7E /* AlmanacView.swift in Sources */,
+				AFA3EBF8245F33EC004685C4 /* AlmanacCoordinator.swift in Sources */,
+				AF35F29C24714E22005D2F86 /* PlanetCellViewModel.swift in Sources */,
+				AFEA20F72449FBD90018FA2D /* CosmicObject.swift in Sources */,
+				AFA3EBFD245F3808004685C4 /* AlmanacViewModel.swift in Sources */,
 				AF49C7F9243A65E3006E610F /* MenuCoordinator.swift in Sources */,
 				AF12FA8123FC0ED000C6F0C9 /* PlanetCalculus.swift in Sources */,
 				AF49C805243A6EED006E610F /* ARCoordinator.swift in Sources */,
 				AF516AF423EAEB5600445A75 /* AppDelegate.swift in Sources */,
 				AF49C7FE243A69C6006E610F /* Storyboarded.swift in Sources */,
 				AFC8C941245B794B006CA98E /* Utils.swift in Sources */,
+				AF18417B24744196000F467E /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

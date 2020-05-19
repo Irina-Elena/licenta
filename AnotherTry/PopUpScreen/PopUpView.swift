@@ -11,22 +11,12 @@ import SceneKit
 
 class PopUpView: UIView {
     var planetScene: SCNView = SCNView()
-    var nameLabel: UILabel = {
-        let nameLabel = UILabel()
-        nameLabel.text = "Neptune"
-        nameLabel.textColor = PlanetColor[nameLabel.text!]
-        nameLabel.font = UIFont(name: "Copperplate", size: 30)
-        nameLabel.sizeToFit()
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        return nameLabel
-    }()
+    var nameLabel = UILabel()
     
     var shortDescriptionLabel: UILabel = {
         let shortDescriptionLabel = UILabel()
         shortDescriptionLabel.textColor = .white
-        shortDescriptionLabel.font = UIFont(name: "Futura", size: 20)
-        shortDescriptionLabel.text = "something about planet"
+        shortDescriptionLabel.font = UIFont(name: "Futura", size: 18)
         shortDescriptionLabel.sizeToFit()
         shortDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -36,7 +26,6 @@ class PopUpView: UIView {
     var showMoreButton: UIButton = {
         let button = UIButton()
         button.setTitle("Show more!", for: .normal)
-        button.tintColor = PlanetColor["Neptune"]
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -44,16 +33,20 @@ class PopUpView: UIView {
     
     var lineBreaker: UILabel = {
         let label = UILabel()
-        label.backgroundColor = PlanetColor["Neptune"]
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    let shortDescriptions: [String] =  ["Neptune is the most distant planet from the Sun","Neptune is the smallest gas giant","A year on Neptune lasts 165 Earth years","Neptune is named after the Roman god of the sea","Neptune has 6 faint rings"]
+    var shortDescriptions: [String] = []
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, planetName: String, shortDescription: String, quickFacts: [String]) {
         super.init(frame: frame)
+        
+        shortDescriptions = quickFacts
+        shortDescriptionLabel.text = shortDescription
         setViewCharacteristics()
+        setPlanetNameLabel(planetName: planetName)
+        lineBreaker.backgroundColor = PlanetColor[planetName]
         
         addSubview(planetScene)
         addSubview(nameLabel)
@@ -61,7 +54,7 @@ class PopUpView: UIView {
         addSubview(lineBreaker)
         addSubview(showMoreButton)
                 
-        setScene()
+        setScene(planetName: planetName)
         setNameLabelConstraint()
         setShortLabelConstraint()
         setBreakerConstraint()
@@ -74,6 +67,14 @@ class PopUpView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setPlanetNameLabel(planetName: String){
+        nameLabel.text = planetName
+        nameLabel.textColor = PlanetColor[planetName]
+        nameLabel.font = UIFont(name: "Copperplate", size: 30)
+        nameLabel.sizeToFit()
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     func setViewCharacteristics() {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .black
@@ -81,7 +82,7 @@ class PopUpView: UIView {
         layer.cornerRadius = 20
     }
     
-    func setScene() {
+    func setScene(planetName: String) {
         let scene = SCNScene()
         planetScene.scene = scene
         planetScene.backgroundColor = .black
@@ -97,15 +98,18 @@ class PopUpView: UIView {
 //        particlesNode.addParticleSystem(particleSystem)
         
 //        planetScene.scene?.rootNode.addChildNode(particlesNode)
-        let planet = SCNScene(named: "art.scnassets/" + nameLabel.text! + ".scn")
-        planet!.rootNode.childNodes[0].runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 20, z: 0, duration: 10)))
+        let planet = SCNScene(named: "art.scnassets/" + planetName + ".scn")
+        if planetName == "Uranus" {
+            planet?.rootNode.eulerAngles = SCNVector3(0, -100, 0)
+        }
+        planet!.rootNode.childNodes[0].runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 8, z: 0, duration: 10)))
         planetScene.scene!.rootNode.addChildNode(planet!.rootNode)
         
         setSceneConstraint()
     }
     
     func designButton(button: UIButton) {
-        button.setTitleColor(PlanetColor["Neptune"], for: .normal)
+        button.setTitleColor(PlanetColor[nameLabel.text!], for: .normal)
         button.backgroundColor = UIColor.black
         button.layer.cornerRadius = 15
         
@@ -180,16 +184,16 @@ class PopUpView: UIView {
     
     func setLabelConstraint(infoLabel: UILabel, lastObject: UILabel, size: CGFloat) {
         infoLabel.translatesAutoresizingMaskIntoConstraints = false
-        infoLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        infoLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        infoLabel.topAnchor.constraint(equalTo: lastObject.bottomAnchor, constant: size).isActive = true
+        infoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
+        infoLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5).isActive = true
+        infoLabel.topAnchor.constraint(equalTo: lastObject.bottomAnchor, constant: size - 2).isActive = true
     }
     
     func setStarConstraint(star starView: UIImageView, infoLabel: UILabel, size: CGFloat) {
         starView.translatesAutoresizingMaskIntoConstraints = false
-        starView.topAnchor.constraint(equalTo: infoLabel.bottomAnchor,constant: size/4).isActive = true
-        starView.heightAnchor.constraint(equalToConstant: 15).isActive = true
-        starView.widthAnchor.constraint(equalToConstant: 15).isActive = true
+        starView.topAnchor.constraint(equalTo: infoLabel.bottomAnchor,constant: size/8).isActive = true
+        starView.heightAnchor.constraint(equalToConstant: 12).isActive = true
+        starView.widthAnchor.constraint(equalToConstant: 12).isActive = true
         starView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
 }
