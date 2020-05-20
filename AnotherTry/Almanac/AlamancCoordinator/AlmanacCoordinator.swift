@@ -9,8 +9,6 @@ import UIKit
 
 
 class AlmanacCoordinator: Coordinator {
-//    var children = [Coordinator]()
-    
     var navigationController: UINavigationController
     
     init(navController: UINavigationController) {

@@ -74,7 +74,7 @@ class RealmService {
             for planet in planets {
                 let cosmicObject = CosmicObject(planetName: planet.name, shortDescription: planet.shortDescription, profile: planet.profile!, position: planet.position, planetDescription: Array(planet.planetDescription), quickFacts: Array(planet.quickFacts))
                 cosmicObjects.append(cosmicObject)
-                print(cosmicObjects)
+//                print(cosmicObjects)
             }
             return cosmicObjects
         }

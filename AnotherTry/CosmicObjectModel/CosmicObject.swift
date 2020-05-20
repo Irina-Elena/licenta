@@ -85,7 +85,6 @@ class CosmicObject: Object {
     required init() {
         name = ""
         images = []
-//        quickFacts = nil
         shortDescription = nil
         profile = Profile()
         position = Position()
@@ -99,11 +98,8 @@ class CosmicObject: Object {
         self.shortDescription = shortDescription
         self.profile = profile
         self.planetDescription.append(objectsIn: planetDescription)
-//        print(quickFacts)
         if let quickFacts = quickFacts {
-//            self.quickFacts = List<String>()
             self.quickFacts.append(objectsIn: quickFacts)
-            print(self.quickFacts)
         }
         if let position = position, let scene = SCNScene(named: "art.scnassets/" + planetName + ".scn") {
             self.node = scene.rootNode

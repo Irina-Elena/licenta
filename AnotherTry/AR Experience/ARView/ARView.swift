@@ -22,14 +22,19 @@ class ARView: UIViewController, Storyboarded, ARSCNViewDelegate, CLLocationManag
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
+        setNavbar()
         
         createPlanets()
         setScene()
         gestureRecognizer()
+    }
+    
+    func setNavbar() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        navigationController?.navigationBar.tintColor = UIColor.systemBlue
     }
     
     func createPlanets() {
