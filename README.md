@@ -1,1 +1,2 @@
 # licenta
+NU INTEELEG CE FAC AICI
