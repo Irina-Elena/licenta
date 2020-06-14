@@ -9,12 +9,15 @@
 class AlmanacViewModel {
     private var cosmicObjects = [CosmicObject]()
     private var filteredPlanets = [CosmicObject]()
-    weak var coordinator: Coordinator?
+    var coordinator: AlmanacCoordinator?
     let realmService = RealmService()
     
-    init(coordinator: Coordinator) {
+    init(coordinator: AlmanacCoordinator) {
         self.coordinator = coordinator
+//        realmService.setData()
         self.cosmicObjects = realmService.getData()
+//        realmService.setData()
+
     }
     
     func getAllPlanets() -> [CosmicObject] {
@@ -41,5 +44,15 @@ class AlmanacViewModel {
             return filteredPlanets[index]
         }
         return cosmicObjects[index]
+    }
+    
+    func goToPlanetInfo(index: Int, isSearchBarActive: Bool) {
+        if let coord = coordinator {
+            if isSearchBarActive == true {
+                coord.goToPlanetInfo(planet: filteredPlanets[index])
+            } else {
+                coord.goToPlanetInfo(planet: cosmicObjects[index])
+            }
+        }
     }
 }

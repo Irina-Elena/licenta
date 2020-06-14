@@ -12,8 +12,8 @@ class MenuView: UIViewController, Storyboarded {
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var arButton: UIButton!
     @IBOutlet weak var almanacButton: UIButton!
-    @IBOutlet weak var gamesButton: UIButton!
-    @IBOutlet weak var quitButton: UIButton!
+//    @IBOutlet weak var gamesButton: UIButton!
+//    @IBOutlet weak var quitButton: UIButton!
     
     var menuVM: MenuViewModel!
     
@@ -36,8 +36,8 @@ class MenuView: UIViewController, Storyboarded {
         designLabel(label: welcomeLabel)
         designButton(button: arButton)
         designButton(button: almanacButton)
-        designButton(button: gamesButton)
-        designButton(button: quitButton)
+//        designButton(button: gamesButton)
+//        designButton(button: quitButton)
     }
     
     func designLabel(label: UILabel) {

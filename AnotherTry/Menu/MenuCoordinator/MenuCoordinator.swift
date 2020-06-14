@@ -10,7 +10,6 @@ import Foundation
 import  UIKit
 
 class MenuCoordinator: Coordinator {
-//    var children = [Coordinator]()
     var navigationController: UINavigationController
     
     init(nav: UINavigationController) {
@@ -24,7 +23,7 @@ class MenuCoordinator: Coordinator {
     }
     
     func goToARExperience() {
-        let coord = ARCoordinator(navigationController: navigationController)
+        let coord = CompassCoordinator(navController: navigationController)
         coord.start()
     }
     

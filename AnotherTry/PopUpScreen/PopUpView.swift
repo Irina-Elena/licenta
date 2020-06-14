@@ -37,16 +37,21 @@ class PopUpView: UIView {
         return label
     }()
     
+    var popUpVM: PopUpViewModel!
+    
     var shortDescriptions: [String] = []
     
-    init(frame: CGRect, planetName: String, shortDescription: String, quickFacts: [String]) {
+    init(frame: CGRect, viewModel: PopUpViewModel) {
         super.init(frame: frame)
         
-        shortDescriptions = quickFacts
-        shortDescriptionLabel.text = shortDescription
+        popUpVM = viewModel
+        shortDescriptions = Array(popUpVM.planet.quickFacts)
+        shortDescriptionLabel.text = popUpVM.planet.shortDescription
         setViewCharacteristics()
-        setPlanetNameLabel(planetName: planetName)
-        lineBreaker.backgroundColor = PlanetColor[planetName]
+        setPlanetNameLabel(planetName: popUpVM.planet.name)
+        lineBreaker.backgroundColor = PlanetColor[popUpVM.planet.name]
+        
+        showMoreButton.addTarget(self, action: #selector(PopUpView.showMoreButtonPressed(sender:)), for: .touchUpInside)
         
         addSubview(planetScene)
         addSubview(nameLabel)
@@ -54,7 +59,7 @@ class PopUpView: UIView {
         addSubview(lineBreaker)
         addSubview(showMoreButton)
                 
-        setScene(planetName: planetName)
+        setScene(planetName: popUpVM.planet.name)
         setNameLabelConstraint()
         setShortLabelConstraint()
         setBreakerConstraint()
@@ -65,6 +70,10 @@ class PopUpView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func showMoreButtonPressed(sender: UIButton!) {
+        popUpVM.goToPlanet()
     }
     
     func setPlanetNameLabel(planetName: String){

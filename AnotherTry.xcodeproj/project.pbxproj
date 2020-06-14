@@ -13,6 +13,13 @@
 		AF35F29C24714E22005D2F86 /* PlanetCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35F29B24714E22005D2F86 /* PlanetCellViewModel.swift */; };
 		AF35F29F2471BD6D005D2F86 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35F29E2471BD6D005D2F86 /* MenuViewModel.swift */; };
 		AF3DDA262439FFF700E56C4E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DDA252439FFF700E56C4E /* MenuView.swift */; };
+		AF3E2DAE247984AA00BB4581 /* PlanetInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E2DAD247984AA00BB4581 /* PlanetInfoViewModel.swift */; };
+		AF3E2DB224798A0300BB4581 /* PlanetInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E2DB024798A0300BB4581 /* PlanetInfoCell.swift */; };
+		AF3E2DB324798A0300BB4581 /* PlanetInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3E2DB124798A0300BB4581 /* PlanetInfoCell.xib */; };
+		AF3E2DBE2479AAA100BB4581 /* PlanetDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E2DBD2479AAA100BB4581 /* PlanetDescriptionViewModel.swift */; };
+		AF3E2DC02479B23500BB4581 /* PlanetDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E2DBF2479B23500BB4581 /* PlanetDescriptionView.swift */; };
+		AF3E2DC32479B60400BB4581 /* PlanetInfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E2DC22479B60400BB4581 /* PlanetInfoCoordinator.swift */; };
+		AF3E2DC62479B9EC00BB4581 /* PlanetDescriptionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E2DC52479B9EC00BB4581 /* PlanetDescriptionCoordinator.swift */; };
 		AF49C7F9243A65E3006E610F /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF49C7F8243A65E3006E610F /* MenuCoordinator.swift */; };
 		AF49C7FB243A65FD006E610F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF49C7FA243A65FD006E610F /* Coordinator.swift */; };
 		AF49C7FE243A69C6006E610F /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF49C7FD243A69C6006E610F /* Storyboarded.swift */; };
@@ -23,14 +30,25 @@
 		AF516AFB23EAEB5600445A75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF516AF923EAEB5600445A75 /* Main.storyboard */; };
 		AF516AFD23EAEB5700445A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF516AFC23EAEB5700445A75 /* Assets.xcassets */; };
 		AF516B0023EAEB5700445A75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF516AFE23EAEB5700445A75 /* LaunchScreen.storyboard */; };
+		AF6219C6247A94C90028B9ED /* PlanetProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6219C5247A94C90028B9ED /* PlanetProfileViewModel.swift */; };
+		AF6219C8247A94D80028B9ED /* PlanetProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6219C7247A94D80028B9ED /* PlanetProfileCoordinator.swift */; };
+		AF6219CA247A99790028B9ED /* PlanetProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6219C9247A99790028B9ED /* PlanetProfileView.swift */; };
+		AF6219D2247AB9120028B9ED /* PlanetProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6219D0247AB9120028B9ED /* PlanetProfileCell.swift */; };
+		AF6219D3247AB9120028B9ED /* PlanetProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6219D1247AB9120028B9ED /* PlanetProfileCell.xib */; };
 		AF7A651024752E7600F0E499 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A650E24752E7600F0E499 /* CollectionViewCell.swift */; };
 		AF7A651124752E7600F0E499 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7A650F24752E7600F0E499 /* CollectionViewCell.xib */; };
+		AF7A7D8C2481193800E6494D /* PopUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A7D8B2481193800E6494D /* PopUpViewModel.swift */; };
 		AF94B1BF245E0BFD00223C7E /* AlmanacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF94B1BE245E0BFD00223C7E /* AlmanacView.swift */; };
 		AFA0F5A4245217E30045A24D /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA0F5A3245217E30045A24D /* PopUpView.swift */; };
+		AFA1C69B2495577A00F1351C /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA1C69A2495577A00F1351C /* CompassView.swift */; };
+		AFA1C69D249558DB00F1351C /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA1C69C249558DB00F1351C /* CanvasView.swift */; };
+		AFA1C69F2495639100F1351C /* CompassCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA1C69E2495639100F1351C /* CompassCoordinator.swift */; };
+		AFA1C6A124956B9100F1351C /* CompassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA1C6A024956B9100F1351C /* CompassViewModel.swift */; };
 		AFA3EBF8245F33EC004685C4 /* AlmanacCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3EBF7245F33EC004685C4 /* AlmanacCoordinator.swift */; };
 		AFA3EBFD245F3808004685C4 /* AlmanacViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3EBFC245F3808004685C4 /* AlmanacViewModel.swift */; };
 		AFC8C93F245B27BE006CA98E /* StarPraticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = AFC8C93E245B27BE006CA98E /* StarPraticles.sks */; };
 		AFC8C941245B794B006CA98E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8C940245B794B006CA98E /* Utils.swift */; };
+		AFD44ED2247966170044A68D /* PlanetInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD44ED1247966170044A68D /* PlanetInfoView.swift */; };
 		AFD6392E2448EC30007F3A9B /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD6392D2448EC30007F3A9B /* ARViewModel.swift */; };
 		AFEA20F72449FBD90018FA2D /* CosmicObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA20F62449FBD90018FA2D /* CosmicObject.swift */; };
 /* End PBXBuildFile section */
@@ -43,11 +61,18 @@
 		AF35F29B24714E22005D2F86 /* PlanetCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCellViewModel.swift; sourceTree = "<group>"; };
 		AF35F29E2471BD6D005D2F86 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		AF3DDA252439FFF700E56C4E /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		AF3E2DAD247984AA00BB4581 /* PlanetInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetInfoViewModel.swift; sourceTree = "<group>"; };
+		AF3E2DB024798A0300BB4581 /* PlanetInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetInfoCell.swift; sourceTree = "<group>"; };
+		AF3E2DB124798A0300BB4581 /* PlanetInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanetInfoCell.xib; sourceTree = "<group>"; };
+		AF3E2DBD2479AAA100BB4581 /* PlanetDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDescriptionViewModel.swift; sourceTree = "<group>"; };
+		AF3E2DBF2479B23500BB4581 /* PlanetDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDescriptionView.swift; sourceTree = "<group>"; };
+		AF3E2DC22479B60400BB4581 /* PlanetInfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetInfoCoordinator.swift; sourceTree = "<group>"; };
+		AF3E2DC52479B9EC00BB4581 /* PlanetDescriptionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDescriptionCoordinator.swift; sourceTree = "<group>"; };
 		AF49C7F8243A65E3006E610F /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		AF49C7FA243A65FD006E610F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AF49C7FD243A69C6006E610F /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		AF49C804243A6EED006E610F /* ARCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCoordinator.swift; sourceTree = "<group>"; };
-		AF516AF023EAEB5600445A75 /* AnotherTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnotherTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF516AF023EAEB5600445A75 /* Planetarium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planetarium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF516AF323EAEB5600445A75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF516AF523EAEB5600445A75 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		AF516AF723EAEB5600445A75 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
@@ -55,14 +80,25 @@
 		AF516AFC23EAEB5700445A75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF516AFF23EAEB5700445A75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF516B0123EAEB5700445A75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF6219C5247A94C90028B9ED /* PlanetProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetProfileViewModel.swift; sourceTree = "<group>"; };
+		AF6219C7247A94D80028B9ED /* PlanetProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetProfileCoordinator.swift; sourceTree = "<group>"; };
+		AF6219C9247A99790028B9ED /* PlanetProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetProfileView.swift; sourceTree = "<group>"; };
+		AF6219D0247AB9120028B9ED /* PlanetProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetProfileCell.swift; sourceTree = "<group>"; };
+		AF6219D1247AB9120028B9ED /* PlanetProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanetProfileCell.xib; sourceTree = "<group>"; };
 		AF7A650E24752E7600F0E499 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		AF7A650F24752E7600F0E499 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		AF7A7D8B2481193800E6494D /* PopUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewModel.swift; sourceTree = "<group>"; };
 		AF94B1BE245E0BFD00223C7E /* AlmanacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmanacView.swift; sourceTree = "<group>"; };
 		AFA0F5A3245217E30045A24D /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		AFA1C69A2495577A00F1351C /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
+		AFA1C69C249558DB00F1351C /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		AFA1C69E2495639100F1351C /* CompassCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassCoordinator.swift; sourceTree = "<group>"; };
+		AFA1C6A024956B9100F1351C /* CompassViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassViewModel.swift; sourceTree = "<group>"; };
 		AFA3EBF7245F33EC004685C4 /* AlmanacCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmanacCoordinator.swift; sourceTree = "<group>"; };
 		AFA3EBFC245F3808004685C4 /* AlmanacViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmanacViewModel.swift; sourceTree = "<group>"; };
 		AFC8C93E245B27BE006CA98E /* StarPraticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarPraticles.sks; sourceTree = "<group>"; };
 		AFC8C940245B794B006CA98E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		AFD44ED1247966170044A68D /* PlanetInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetInfoView.swift; sourceTree = "<group>"; };
 		AFD6392D2448EC30007F3A9B /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
 		AFEA20F62449FBD90018FA2D /* CosmicObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmicObject.swift; sourceTree = "<group>"; };
 		F6B8E634B8692B244C33FF9F /* Pods-AnotherTry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnotherTry.release.xcconfig"; path = "Target Support Files/Pods-AnotherTry/Pods-AnotherTry.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +157,65 @@
 				AF35F29E2471BD6D005D2F86 /* MenuViewModel.swift */,
 			);
 			path = MenuViewModel;
+			sourceTree = "<group>";
+		};
+		AF3E2DAC2479848C00BB4581 /* PlanetInfoViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF3E2DAD247984AA00BB4581 /* PlanetInfoViewModel.swift */,
+			);
+			path = PlanetInfoViewModel;
+			sourceTree = "<group>";
+		};
+		AF3E2DAF247989B500BB4581 /* PlanetInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF3E2DB024798A0300BB4581 /* PlanetInfoCell.swift */,
+				AF3E2DB124798A0300BB4581 /* PlanetInfoCell.xib */,
+			);
+			path = PlanetInfoCell;
+			sourceTree = "<group>";
+		};
+		AF3E2DBA2479AA1900BB4581 /* PlanetDescription */ = {
+			isa = PBXGroup;
+			children = (
+				AF3E2DC42479B9C700BB4581 /* PlanetDescriptionCoordinator */,
+				AF3E2DBC2479AA7300BB4581 /* PlanetDescriptionViewModel */,
+				AF3E2DBB2479AA2300BB4581 /* PlanetDescriptionView */,
+			);
+			path = PlanetDescription;
+			sourceTree = "<group>";
+		};
+		AF3E2DBB2479AA2300BB4581 /* PlanetDescriptionView */ = {
+			isa = PBXGroup;
+			children = (
+				AF3E2DBF2479B23500BB4581 /* PlanetDescriptionView.swift */,
+			);
+			path = PlanetDescriptionView;
+			sourceTree = "<group>";
+		};
+		AF3E2DBC2479AA7300BB4581 /* PlanetDescriptionViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF3E2DBD2479AAA100BB4581 /* PlanetDescriptionViewModel.swift */,
+			);
+			path = PlanetDescriptionViewModel;
+			sourceTree = "<group>";
+		};
+		AF3E2DC12479B5E900BB4581 /* PlanetInfoCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AF3E2DC22479B60400BB4581 /* PlanetInfoCoordinator.swift */,
+			);
+			path = PlanetInfoCoordinator;
+			sourceTree = "<group>";
+		};
+		AF3E2DC42479B9C700BB4581 /* PlanetDescriptionCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AF3E2DC52479B9EC00BB4581 /* PlanetDescriptionCoordinator.swift */,
+			);
+			path = PlanetDescriptionCoordinator;
 			sourceTree = "<group>";
 		};
 		AF49C7F5243A56D0006E610F /* Menu */ = {
@@ -188,7 +283,7 @@
 		AF516AF123EAEB5600445A75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF516AF023EAEB5600445A75 /* AnotherTry.app */,
+				AF516AF023EAEB5600445A75 /* Planetarium.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,6 +291,10 @@
 		AF516AF223EAEB5600445A75 /* AnotherTry */ = {
 			isa = PBXGroup;
 			children = (
+				AFA1C6992495576000F1351C /* Compass */,
+				AF6219BF247A94350028B9ED /* PlanetProfile */,
+				AF3E2DBA2479AA1900BB4581 /* PlanetDescription */,
+				AFD44ECF247965DE0044A68D /* PlanetInfo */,
 				AF94B1BC245E0ACB00223C7E /* Almanac */,
 				AFA0F5A2245217BF0045A24D /* PopUpScreen */,
 				AFEA20F52449FBC50018FA2D /* CosmicObjectModel */,
@@ -214,6 +313,50 @@
 				AF516B0123EAEB5700445A75 /* Info.plist */,
 			);
 			path = AnotherTry;
+			sourceTree = "<group>";
+		};
+		AF6219BF247A94350028B9ED /* PlanetProfile */ = {
+			isa = PBXGroup;
+			children = (
+				AF6219C2247A948D0028B9ED /* PlanetProfileCoordinator */,
+				AF6219C1247A94740028B9ED /* PlanetProfileViewModel */,
+				AF6219C0247A94430028B9ED /* PlanetProfileView */,
+			);
+			path = PlanetProfile;
+			sourceTree = "<group>";
+		};
+		AF6219C0247A94430028B9ED /* PlanetProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				AF6219CB247A9B150028B9ED /* PlanetProfileCell */,
+				AF6219C9247A99790028B9ED /* PlanetProfileView.swift */,
+			);
+			path = PlanetProfileView;
+			sourceTree = "<group>";
+		};
+		AF6219C1247A94740028B9ED /* PlanetProfileViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF6219C5247A94C90028B9ED /* PlanetProfileViewModel.swift */,
+			);
+			path = PlanetProfileViewModel;
+			sourceTree = "<group>";
+		};
+		AF6219C2247A948D0028B9ED /* PlanetProfileCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AF6219C7247A94D80028B9ED /* PlanetProfileCoordinator.swift */,
+			);
+			path = PlanetProfileCoordinator;
+			sourceTree = "<group>";
+		};
+		AF6219CB247A9B150028B9ED /* PlanetProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF6219D0247AB9120028B9ED /* PlanetProfileCell.swift */,
+				AF6219D1247AB9120028B9ED /* PlanetProfileCell.xib */,
+			);
+			path = PlanetProfileCell;
 			sourceTree = "<group>";
 		};
 		AF94B1BC245E0ACB00223C7E /* Almanac */ = {
@@ -238,10 +381,22 @@
 		AFA0F5A2245217BF0045A24D /* PopUpScreen */ = {
 			isa = PBXGroup;
 			children = (
+				AF7A7D8B2481193800E6494D /* PopUpViewModel.swift */,
 				AFA0F5A3245217E30045A24D /* PopUpView.swift */,
 				AFC8C93E245B27BE006CA98E /* StarPraticles.sks */,
 			);
 			path = PopUpScreen;
+			sourceTree = "<group>";
+		};
+		AFA1C6992495576000F1351C /* Compass */ = {
+			isa = PBXGroup;
+			children = (
+				AFA1C69E2495639100F1351C /* CompassCoordinator.swift */,
+				AFA1C69A2495577A00F1351C /* CompassView.swift */,
+				AFA1C69C249558DB00F1351C /* CanvasView.swift */,
+				AFA1C6A024956B9100F1351C /* CompassViewModel.swift */,
+			);
+			path = Compass;
 			sourceTree = "<group>";
 		};
 		AFA3EBF6245F33C2004685C4 /* AlamancCoordinator */ = {
@@ -258,6 +413,25 @@
 				AFA3EBFC245F3808004685C4 /* AlmanacViewModel.swift */,
 			);
 			path = AlmanacViewModel;
+			sourceTree = "<group>";
+		};
+		AFD44ECF247965DE0044A68D /* PlanetInfo */ = {
+			isa = PBXGroup;
+			children = (
+				AF3E2DC12479B5E900BB4581 /* PlanetInfoCoordinator */,
+				AF3E2DAC2479848C00BB4581 /* PlanetInfoViewModel */,
+				AFD44ED0247965EB0044A68D /* PlanetInfoView */,
+			);
+			path = PlanetInfo;
+			sourceTree = "<group>";
+		};
+		AFD44ED0247965EB0044A68D /* PlanetInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				AF3E2DAF247989B500BB4581 /* PlanetInfoCell */,
+				AFD44ED1247966170044A68D /* PlanetInfoView.swift */,
+			);
+			path = PlanetInfoView;
 			sourceTree = "<group>";
 		};
 		AFD6392C2448EC15007F3A9B /* ARViewModel */ = {
@@ -302,7 +476,7 @@
 			);
 			name = AnotherTry;
 			productName = AnotherTry;
-			productReference = AF516AF023EAEB5600445A75 /* AnotherTry.app */;
+			productReference = AF516AF023EAEB5600445A75 /* Planetarium.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -346,7 +520,9 @@
 				AF516AF623EAEB5600445A75 /* art.scnassets in Resources */,
 				AF516B0023EAEB5700445A75 /* LaunchScreen.storyboard in Resources */,
 				AF7A651124752E7600F0E499 /* CollectionViewCell.xib in Resources */,
+				AF6219D3247AB9120028B9ED /* PlanetProfileCell.xib in Resources */,
 				AF516AFD23EAEB5700445A75 /* Assets.xcassets in Resources */,
+				AF3E2DB324798A0300BB4581 /* PlanetInfoCell.xib in Resources */,
 				AF516AFB23EAEB5600445A75 /* Main.storyboard in Resources */,
 				AFC8C93F245B27BE006CA98E /* StarPraticles.sks in Resources */,
 			);
@@ -390,19 +566,35 @@
 				AF35F29F2471BD6D005D2F86 /* MenuViewModel.swift in Sources */,
 				AF3DDA262439FFF700E56C4E /* MenuView.swift in Sources */,
 				AF49C7FB243A65FD006E610F /* Coordinator.swift in Sources */,
+				AFD44ED2247966170044A68D /* PlanetInfoView.swift in Sources */,
 				AF94B1BF245E0BFD00223C7E /* AlmanacView.swift in Sources */,
+				AFA1C69D249558DB00F1351C /* CanvasView.swift in Sources */,
+				AF3E2DC32479B60400BB4581 /* PlanetInfoCoordinator.swift in Sources */,
+				AF3E2DC62479B9EC00BB4581 /* PlanetDescriptionCoordinator.swift in Sources */,
+				AFA1C6A124956B9100F1351C /* CompassViewModel.swift in Sources */,
+				AFA1C69F2495639100F1351C /* CompassCoordinator.swift in Sources */,
 				AFA3EBF8245F33EC004685C4 /* AlmanacCoordinator.swift in Sources */,
+				AF7A7D8C2481193800E6494D /* PopUpViewModel.swift in Sources */,
+				AF3E2DC02479B23500BB4581 /* PlanetDescriptionView.swift in Sources */,
 				AF35F29C24714E22005D2F86 /* PlanetCellViewModel.swift in Sources */,
 				AF7A651024752E7600F0E499 /* CollectionViewCell.swift in Sources */,
 				AFEA20F72449FBD90018FA2D /* CosmicObject.swift in Sources */,
 				AFA3EBFD245F3808004685C4 /* AlmanacViewModel.swift in Sources */,
+				AF3E2DBE2479AAA100BB4581 /* PlanetDescriptionViewModel.swift in Sources */,
 				AF49C7F9243A65E3006E610F /* MenuCoordinator.swift in Sources */,
 				AF12FA8123FC0ED000C6F0C9 /* PlanetCalculus.swift in Sources */,
 				AF49C805243A6EED006E610F /* ARCoordinator.swift in Sources */,
+				AF6219C8247A94D80028B9ED /* PlanetProfileCoordinator.swift in Sources */,
+				AF6219CA247A99790028B9ED /* PlanetProfileView.swift in Sources */,
 				AF516AF423EAEB5600445A75 /* AppDelegate.swift in Sources */,
+				AF3E2DB224798A0300BB4581 /* PlanetInfoCell.swift in Sources */,
 				AF49C7FE243A69C6006E610F /* Storyboarded.swift in Sources */,
+				AF6219C6247A94C90028B9ED /* PlanetProfileViewModel.swift in Sources */,
 				AFC8C941245B794B006CA98E /* Utils.swift in Sources */,
+				AF3E2DAE247984AA00BB4581 /* PlanetInfoViewModel.swift in Sources */,
+				AFA1C69B2495577A00F1351C /* CompassView.swift in Sources */,
 				AF18417B24744196000F467E /* RealmService.swift in Sources */,
+				AF6219D2247AB9120028B9ED /* PlanetProfileCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +761,7 @@
 				);
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = irina.cercel.AnotherTry;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Planetarium;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -594,7 +786,7 @@
 				);
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = irina.cercel.AnotherTry;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Planetarium;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

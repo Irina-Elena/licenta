@@ -75,7 +75,7 @@ class Planet {
     }
     
     func eccentricAnomaly(e: Double) -> Double {
-        var E = M + e*(180/Double.pi) * sin(Double.pi/180 * M) * ( 1.0 + e * cos(Double.pi/180 * M))
+        var E = M + e * sin(Double.pi/180 * M) * ( 1.0 + e * cos(Double.pi/180 * M))
         var F: Double
         var error: Double
         while true {

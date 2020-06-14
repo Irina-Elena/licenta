@@ -16,10 +16,16 @@ class AlmanacView: UIViewController, Storyboarded {
     
     var almanacVM: AlmanacViewModel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setNavigationBar()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         overrideUserInterfaceStyle = .dark
-        setNavigationBar()
         setCollectionView()
     }
     
@@ -28,10 +34,11 @@ class AlmanacView: UIViewController, Storyboarded {
         planetsCollectionView.delegate = self
         planetsCollectionView.register(UINib.init(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         let insetX = (view.bounds.width - 250) / 2
-        planetsCollectionView.contentInset = UIEdgeInsets(top: 0, left: insetX, bottom: 0, right: -insetX)
+        planetsCollectionView.contentInset = UIEdgeInsets(top: 0, left: insetX, bottom: 0, right: insetX/2)
     }
     
     func setNavigationBar() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
         title = "Almanac"
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
@@ -51,6 +58,7 @@ class AlmanacView: UIViewController, Storyboarded {
         navigationItem.hidesSearchBarWhenScrolling = false
         let textFieldInsideSearchBar = searchController.searchBar.value(forKey: "searchField") as? UITextField
         textFieldInsideSearchBar?.textColor = UIColor.gray
+        isSearchBarActive = false
     }
     
 
@@ -83,6 +91,10 @@ extension AlmanacView: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        almanacVM.goToPlanetInfo(index: indexPath.item, isSearchBarActive: isSearchBarActive)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = CGSize(width: 250, height: 500)
         return size
@@ -105,6 +117,7 @@ extension AlmanacView: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         isSearchBarActive = false
+        planetsCollectionView.reloadData()
         self.dismiss(animated: true, completion: nil)
     }
 }

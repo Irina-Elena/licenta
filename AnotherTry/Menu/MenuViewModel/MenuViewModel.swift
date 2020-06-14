@@ -6,11 +6,8 @@
 //  Copyright © 2020 Irina Cercel. All rights reserved.
 //
 
-import RealmSwift
-
 class MenuViewModel {
     weak var coordinator: MenuCoordinator?
-    
     
     init(coordinator: MenuCoordinator) {
         self.coordinator = coordinator

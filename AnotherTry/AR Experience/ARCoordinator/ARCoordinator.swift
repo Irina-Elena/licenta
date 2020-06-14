@@ -21,4 +21,9 @@ class ARCoordinator: Coordinator {
         vc.arVM = ARViewModel(coordinator: self)
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func goToPlanetInfo(planet: CosmicObject) {
+        let coord = PlanetInfoCoordinator(navigationController: self.navigationController)
+        coord.start(planet: planet)
+    }
 }
